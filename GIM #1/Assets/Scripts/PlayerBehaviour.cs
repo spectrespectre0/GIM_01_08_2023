@@ -24,7 +24,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (rb.gravityScale < 0)
         {
             jumpheight = jumpheight * -1;
-            keycode_space = KeyCode.Return;
+            keycode_space = KeyCode.UpArrow;
             var part = GetComponent<ParticleSystem>();
             var a = part.main;
             float gravity = part.main.gravityModifierMultiplier;
