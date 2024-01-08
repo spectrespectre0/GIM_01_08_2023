@@ -19,7 +19,6 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         checkjump = false;
-        speed = 10f;
         jumpheight = 24f;
         keycode_space = KeyCode.Space;
         if (rb.gravityScale < 0)
@@ -78,6 +77,11 @@ public class NewBehaviourScript : MonoBehaviour
         {
             checkjump = false;
         }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        checkjump = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
