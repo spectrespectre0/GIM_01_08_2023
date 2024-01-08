@@ -15,6 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
+    //this is void start
     void Start()
     {
         checkjump = false;
