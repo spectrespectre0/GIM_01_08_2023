@@ -14,6 +14,8 @@ public class NewBehaviourScript : MonoBehaviour
     public KeyCode keycode_space_3;
     public GameObject player;
     public GameObject UIrestart;
+    public GameObject Pause;
+    public PauseMenu esc_pause;
     public Rigidbody2D rb;
 
   
@@ -64,6 +66,24 @@ public class NewBehaviourScript : MonoBehaviour
         {
             buttonpress = false;
         }
+
+        //restart after death without mouse click
+        if(UIrestart.activeSelf == true && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            OnRestartButton();
+        }
+
+        //pause menu without mouse click
+        if(UIrestart.activeSelf == false && Time.timeScale == 1 && Input.GetKeyDown(KeyCode.Escape))
+        {
+            esc_pause.Pause();
+        }
+
+        //resume without mouse click
+        if (UIrestart.activeSelf == false && Time.timeScale == 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            esc_pause.Resume();
+        }
     }
 
     void FixedUpdate()
@@ -105,6 +125,7 @@ public class NewBehaviourScript : MonoBehaviour
             part.Play();
             player.GetComponent<Renderer>().enabled = false;
             UIrestart.SetActive(true);
+            Pause.SetActive(false);
         }
     }
 

@@ -5,10 +5,12 @@ using UnityEngine;
 public class RestartButton : MonoBehaviour
 {
     public NewBehaviourScript NBS;
+    
     //public GameObject UIrestart;
     
     public void onclick()
     {
         NBS.OnRestartButton();
+        
     }
 }

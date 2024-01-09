@@ -19,6 +19,6 @@ public class PlayAgain : MonoBehaviour
 
     public void onclick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("LevelSelection");
     }
 }
