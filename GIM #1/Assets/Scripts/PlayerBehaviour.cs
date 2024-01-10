@@ -17,8 +17,12 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject Pause;
     public PauseMenu esc_pause;
     public Rigidbody2D rb;
+    public AudioSource playerAudioSource;
+    public AudioClip collisionAudioClip;
 
-  
+
+
+
 
     // Start is called before the first frame update
     //this is void start
@@ -120,6 +124,11 @@ public class NewBehaviourScript : MonoBehaviour
         //spike death
         if (collision.gameObject.CompareTag("Spike"))
         {
+            // Stop the audio clip
+            playerAudioSource.Stop();
+            playerAudioSource.clip = collisionAudioClip;
+            playerAudioSource.Play();
+
             Time.timeScale = 0;
             var part = GetComponent<ParticleSystem>();
             part.Play();
