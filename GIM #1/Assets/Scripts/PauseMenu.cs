@@ -8,17 +8,21 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject pauseButton;
+    public NewBehaviourScript audioref;
+
     public void Pause()
     {
+      
       pauseMenu.SetActive(true);
       pauseButton.SetActive(false);
       Time.timeScale = 0;
+      
     }
     public void Resume()
     {
       pauseMenu.SetActive(false);
       pauseButton.SetActive(true);
-      Time.timeScale = 1;
+        Time.timeScale = 1;
     } 
     public void Goback()
     {
@@ -26,5 +30,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1; 
     }
 
+    public void Pausemusic()
+    {
+        audioref.playerAudioSource.Pause();
+    }
 
+    public void UnPausemusic()
+    {
+       audioref.playerAudioSource.UnPause();
+    }
 }
