@@ -56,7 +56,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
         buttonpress = false;
-    }
+    } 
 
     // Update is called once per frame
     void Update()
@@ -88,7 +88,13 @@ public class NewBehaviourScript : MonoBehaviour
         {
             esc_pause.Resume();
         }
-    }
+
+    } 
+
+    public void nextbutton()
+    {
+        SceneManager.LoadSceneAsync(1);
+    } 
 
     void FixedUpdate()
     {
@@ -129,13 +135,25 @@ public class NewBehaviourScript : MonoBehaviour
             playerAudioSource.clip = collisionAudioClip;
             playerAudioSource.Play();
 
-            Time.timeScale = 0;
-            var part = GetComponent<ParticleSystem>();
-            part.Play();
-            player.GetComponent<Renderer>().enabled = false;
-            UIrestart.SetActive(true);
-            Pause.SetActive(false);
+            StartCoroutine(ShowDeathEffects());
         }
+    }
+
+    IEnumerator ShowDeathEffects()
+    {
+        
+        // Play death effects
+        var part = GetComponent<ParticleSystem>();
+        part.Play();
+        player.GetComponent<Renderer>().enabled = false;
+
+        // Wait for a very short interlude duration (adjust as needed)
+        yield return new WaitForSeconds(0.2f);
+
+        // Show UI elements after the interlude
+        Time.timeScale = 0;
+        UIrestart.SetActive(true);
+        Pause.SetActive(false);
     }
 
     public void OnRestartButton()
