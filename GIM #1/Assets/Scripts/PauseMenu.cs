@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
       pauseMenu.SetActive(true);
       pauseButton.SetActive(false);
       Time.timeScale = 0;
+      Pausemusic();
       
     }
     public void Resume()
@@ -23,6 +24,7 @@ public class PauseMenu : MonoBehaviour
       pauseMenu.SetActive(false);
       pauseButton.SetActive(true);
         Time.timeScale = 1;
+        UnPausemusic();
     } 
     public void Goback()
     {
