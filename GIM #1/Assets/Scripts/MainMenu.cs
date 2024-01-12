@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("LevelSelection");
         }
     }
 }

@@ -65,6 +65,11 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKeyDown(keycode_space_1) || Input.GetKeyDown(keycode_space_2) || Input.GetKeyDown(keycode_space_3))
         {
             buttonpress = true;
+            if (rb.gravityScale < 0)
+            {
+                Debug.Log(player.transform.position.x);
+            }
+
         }
         if (Input.GetKeyUp(keycode_space_1) || Input.GetKeyUp(keycode_space_2) || Input.GetKeyUp(keycode_space_3))
         {
