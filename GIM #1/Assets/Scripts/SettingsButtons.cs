@@ -11,8 +11,6 @@ public class SettingsButtons : MonoBehaviour
 {
     public KeyCode change;
     public string change_str;
-    public GameObject p1;
-    public GameObject p2;
     public NewBehaviourScript nbs1;
     public NewBehaviourScript nbs2;
     public TextMeshProUGUI p1_1;
@@ -28,8 +26,14 @@ public class SettingsButtons : MonoBehaviour
     {
         assign = 1;
         clickstatus = false;
+        p1_1.text = PlayerPrefs.GetString("p11", KeyCode.Z.ToString());
+        p1_2.text = PlayerPrefs.GetString("p12", KeyCode.X.ToString());
+        p1_3.text = PlayerPrefs.GetString("p13", KeyCode.C.ToString());
+        p2_1.text = PlayerPrefs.GetString("p21", KeyCode.B.ToString());
+        p2_2.text = PlayerPrefs.GetString("p22", KeyCode.N.ToString());
+        p2_3.text = PlayerPrefs.GetString("p23", KeyCode.M.ToString());
     }
-
+    
     private void Update()
     {
         if (clickstatus)
@@ -45,27 +49,33 @@ public class SettingsButtons : MonoBehaviour
                     {
                         case 1:
                             p1_1.text = change.ToString();
-                            nbs1.keycode_space_1 = change;
+                            PlayerPrefs.SetString("p11", p1_1.text);
+                            PlayerPrefs.SetInt("p1_1", (int)change);
                             break;
                         case 2:
                             p1_2.text = change.ToString();
-                            nbs1.keycode_space_2 = change;
+                            PlayerPrefs.SetString("p12", p1_2.text);
+                            PlayerPrefs.SetInt("p1_2", (int)change);
                             break;
                         case 3:
                             p1_3.text = change.ToString();
-                            nbs1.keycode_space_3 = change;
+                            PlayerPrefs.SetString("p13", p1_3.text);
+                            PlayerPrefs.SetInt("p1_3", (int)change);
                             break;
                         case 4:
                             p2_1.text = change.ToString();
-                            nbs2.keycode_space_1 = change;
+                            PlayerPrefs.SetString("p21", p2_1.text);
+                            PlayerPrefs.SetInt("p2_1", (int)change);
                             break;
                         case 5:
                             p2_2.text = change.ToString();
-                            nbs2.keycode_space_2 = change;
+                            PlayerPrefs.SetString("p22", p2_2.text);
+                            PlayerPrefs.SetInt("p2_2", (int)change);
                             break;
                         case 6:
                             p2_3.text = change.ToString();
-                            nbs2.keycode_space_3 = change;
+                            PlayerPrefs.SetString("p23", p2_3.text);
+                            PlayerPrefs.SetInt("p2_3", (int)change);
                             break;
                     }
 

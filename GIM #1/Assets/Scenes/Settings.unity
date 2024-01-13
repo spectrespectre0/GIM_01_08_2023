@@ -362,11 +362,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   change: 0
   change_str: 
-  p1: {fileID: 4831806647225690320, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
-  p2: {fileID: 3388222851856944066, guid: 1cbb931c19657ea4089f325c8c3b94a4, type: 3}
-  nbs1: {fileID: 8972233853260169168, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
-  nbs2: {fileID: 6536926381088823463, guid: 1cbb931c19657ea4089f325c8c3b94a4, type: 3}
-  cs: {fileID: 0}
+  p1: {fileID: 3473346427840068027, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
+  p2: {fileID: 3654638466493601043, guid: 1cbb931c19657ea4089f325c8c3b94a4, type: 3}
+  nbs1: {fileID: 8387153282774180485, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
+  nbs2: {fileID: 5991850583628863754, guid: 1cbb931c19657ea4089f325c8c3b94a4, type: 3}
   p1_1: {fileID: 741233125}
   p1_2: {fileID: 2093819019}
   p1_3: {fileID: 981187759}
@@ -374,7 +373,6 @@ MonoBehaviour:
   p2_2: {fileID: 1517892224}
   p2_3: {fileID: 1221743889}
   clickstatus: 0
-  changestatus: 0
   assign: 0
 --- !u!4 &175398564
 Transform:
@@ -633,7 +631,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8972233853260169168, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
+      - m_Target: {fileID: 8387153282774180485, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
         m_MethodName: nextbutton
         m_Mode: 1

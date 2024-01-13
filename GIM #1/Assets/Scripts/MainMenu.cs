@@ -17,6 +17,11 @@ public class MainMenu : MonoBehaviour
         {
             SceneManager.LoadScene("LevelSelection");
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
 

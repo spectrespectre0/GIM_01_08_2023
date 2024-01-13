@@ -12,6 +12,9 @@ public class NewBehaviourScript : MonoBehaviour
     public KeyCode keycode_space_1;
     public KeyCode keycode_space_2;
     public KeyCode keycode_space_3;
+    public int key_1;
+    public int key_2;
+    public int key_3;
     public GameObject player;
     public GameObject UIrestart;
     public GameObject Pause;
@@ -19,6 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
     public Rigidbody2D rb;
     public AudioSource playerAudioSource;
     public AudioClip collisionAudioClip;
+    public SettingsButtons sets;
 
 
 
@@ -30,15 +34,17 @@ public class NewBehaviourScript : MonoBehaviour
     {
         checkjump = false;
         jumpheight = 24f;
-        //keycode_space_1 = referencepref.keycode_space_1;
-        //keycode_space_2 = referencepref.keycode_space_2;
-        //keycode_space_3 = referencepref.keycode_space_3;
+
+        key_1 = PlayerPrefs.GetInt("p1_1",(int)KeyCode.Z);
+        key_2 = PlayerPrefs.GetInt("p1_2", (int)KeyCode.X);
+        key_3 = PlayerPrefs.GetInt("p1_3", (int)KeyCode.C);
+
         if (rb.gravityScale < 0)
         {
             jumpheight = jumpheight * -1;
-            //keycode_space_1 = KeyCode.B;
-            //keycode_space_2 = KeyCode.N;
-            //keycode_space_3 = KeyCode.M;
+            key_1 = PlayerPrefs.GetInt("p2_1", (int)KeyCode.B);
+            key_2 = PlayerPrefs.GetInt("p2_2", (int)KeyCode.N);
+            key_3 = PlayerPrefs.GetInt("p2_3", (int)KeyCode.M);
             var part = GetComponent<ParticleSystem>();
             var a = part.main;
             float gravity = part.main.gravityModifierMultiplier;
@@ -54,6 +60,10 @@ public class NewBehaviourScript : MonoBehaviour
             keycode_space_2 = KeyCode.None;
             keycode_space_3 = KeyCode.None;
         }
+
+        keycode_space_1 = (KeyCode)key_1;
+        keycode_space_2 = (KeyCode)key_2;
+        keycode_space_3 = (KeyCode)key_3;
 
         buttonpress = false;
     } 
@@ -83,7 +93,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
         //pause menu without mouse click
-        if(UIrestart.activeSelf == false && Time.timeScale == 1 && Input.GetKeyDown(KeyCode.Escape))
+        if(UIrestart.activeSelf == false && Time.timeScale == 1 && Input.GetKeyDown((KeyCode)27)) //(keycode)27 = keycode.escape
         {
             esc_pause.Pause();
         }
