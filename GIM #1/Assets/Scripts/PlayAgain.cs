@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class PlayAgain : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public LevelSelect ls;
+    public string stat;
+
     void Start()
     {
         
@@ -18,6 +22,12 @@ public class PlayAgain : MonoBehaviour
     }
 
     public void onclick()
+    {
+        stat = ls.status;
+        SceneManager.LoadScene(stat);
+    }
+
+    public void homeclick()
     {
         SceneManager.LoadScene("LevelSelection");
     }

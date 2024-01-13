@@ -30,15 +30,15 @@ public class NewBehaviourScript : MonoBehaviour
     {
         checkjump = false;
         jumpheight = 24f;
-        keycode_space_1 = KeyCode.Z;
-        keycode_space_2 = KeyCode.X;
-        keycode_space_3 = KeyCode.C;
+        //keycode_space_1 = referencepref.keycode_space_1;
+        //keycode_space_2 = referencepref.keycode_space_2;
+        //keycode_space_3 = referencepref.keycode_space_3;
         if (rb.gravityScale < 0)
         {
             jumpheight = jumpheight * -1;
-            keycode_space_1 = KeyCode.B;
-            keycode_space_2 = KeyCode.N;
-            keycode_space_3 = KeyCode.M;
+            //keycode_space_1 = KeyCode.B;
+            //keycode_space_2 = KeyCode.N;
+            //keycode_space_3 = KeyCode.M;
             var part = GetComponent<ParticleSystem>();
             var a = part.main;
             float gravity = part.main.gravityModifierMultiplier;
@@ -98,7 +98,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void nextbutton()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene("LevelSelection");
     } 
 
     void FixedUpdate()

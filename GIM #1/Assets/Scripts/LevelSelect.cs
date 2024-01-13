@@ -10,7 +10,7 @@ public class LevelSelect : MonoBehaviour
 
     // Update is called once per frame
 
-    public string status;
+    public string status = "EasyLevel";
 
     public void easy()
     {
@@ -27,6 +27,16 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("HardLevel");
         status = "HardLevel";
+    }
+
+    public void settingsbutton()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
+    public void tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 
     void Update()
