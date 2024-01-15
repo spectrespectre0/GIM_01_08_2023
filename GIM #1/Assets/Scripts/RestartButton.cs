@@ -5,6 +5,7 @@ using UnityEngine;
 public class RestartButton : MonoBehaviour
 {
     public NewBehaviourScript NBS;
+    public PauseMenu PM;
     
     //public GameObject UIrestart;
     
@@ -12,5 +13,10 @@ public class RestartButton : MonoBehaviour
     {
         NBS.OnRestartButton();
         
+    }
+
+    public void onhomeclick()
+    {
+        PM.Goback();
     }
 }

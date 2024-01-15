@@ -15,13 +15,16 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            SceneManager.LoadScene("LevelSelection");
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+            else
+            {
+                SceneManager.LoadScene("LevelSelection");
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 }
 

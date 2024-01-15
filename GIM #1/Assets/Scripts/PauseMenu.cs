@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     } 
     public void Goback()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("LevelSelection");
         Time.timeScale = 1; 
     }
 

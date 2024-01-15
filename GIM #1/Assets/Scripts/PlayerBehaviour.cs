@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,7 @@ public class NewBehaviourScript : MonoBehaviour
     public int key_2;
     public int key_3;
     public GameObject player;
+    public GameObject otherplayer;
     public GameObject UIrestart;
     public GameObject Pause;
     public PauseMenu esc_pause;
@@ -23,7 +25,6 @@ public class NewBehaviourScript : MonoBehaviour
     public AudioSource playerAudioSource;
     public AudioClip collisionAudioClip;
     public SettingsButtons sets;
-
 
 
 
@@ -71,6 +72,8 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(rb.velocity.x);
 
         if (Input.GetKeyDown(keycode_space_1) || Input.GetKeyDown(keycode_space_2) || Input.GetKeyDown(keycode_space_3))
         {
@@ -143,7 +146,7 @@ public class NewBehaviourScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         //spike death
-        if (collision.gameObject.CompareTag("Spike"))
+        if (collision.gameObject.CompareTag("Spike") || (collision.gameObject.CompareTag("Floor") && (rb.velocity.x == 0)))
         {
             // Stop the audio clip
             playerAudioSource.Stop();

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 690052255952084061}
   - component: {fileID: 7337444004079106838}
+  - component: {fileID: 5991850583628863754}
   - component: {fileID: 3099856948731682737}
   - component: {fileID: 6968945423277347131}
   - component: {fileID: 8157363439020515156}
-  - component: {fileID: 5991850583628863754}
   - component: {fileID: 5133892150568444217}
   - component: {fileID: 3756085003415516911}
   m_Layer: 0
@@ -90,6 +90,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5991850583628863754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654638466493601043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed34da2360205142bc443e2eca59e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  checkjump: 1
+  buttonpress: 0
+  jumpheight: 24
+  keycode_space_1: 98
+  keycode_space_2: 110
+  keycode_space_3: 109
+  key_1: 0
+  key_2: 0
+  key_3: 0
+  player: {fileID: 3654638466493601043}
+  otherplayer: {fileID: 3473346427840068027, guid: 954f00df9cb46e94497da2a619174f83, type: 3}
+  UIrestart: {fileID: 0}
+  Pause: {fileID: 0}
+  esc_pause: {fileID: 0}
+  rb: {fileID: 3099856948731682737}
+  playerAudioSource: {fileID: 0}
+  collisionAudioClip: {fileID: 8300000, guid: 3b196c3915c72ca4ea9819d89918db41, type: 3}
+  sets: {fileID: 0}
 --- !u!50 &3099856948731682737
 Rigidbody2D:
   serializedVersion: 4
@@ -207,32 +238,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0328286}
   m_EdgeRadius: 0
---- !u!114 &5991850583628863754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3654638466493601043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed34da2360205142bc443e2eca59e4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  checkjump: 1
-  buttonpress: 0
-  jumpheight: 24
-  keycode_space_1: 98
-  keycode_space_2: 110
-  keycode_space_3: 109
-  player: {fileID: 3654638466493601043}
-  UIrestart: {fileID: 0}
-  Pause: {fileID: 0}
-  esc_pause: {fileID: 0}
-  rb: {fileID: 3099856948731682737}
-  playerAudioSource: {fileID: 0}
-  collisionAudioClip: {fileID: 8300000, guid: 3b196c3915c72ca4ea9819d89918db41, type: 3}
 --- !u!198 &5133892150568444217
 ParticleSystem:
   m_ObjectHideFlags: 0

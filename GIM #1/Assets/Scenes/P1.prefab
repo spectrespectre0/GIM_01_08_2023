@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3571382806460519886}
   - component: {fileID: 4533061369602541451}
+  - component: {fileID: 8387153282774180485}
   - component: {fileID: 6473967076523422225}
   - component: {fileID: 1155673508606186427}
   - component: {fileID: 4916744203851381345}
-  - component: {fileID: 8387153282774180485}
   - component: {fileID: 6550054618812323959}
   - component: {fileID: 14832786828209502}
   - component: {fileID: 2656079983940573920}
@@ -92,6 +92,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8387153282774180485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3473346427840068027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed34da2360205142bc443e2eca59e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  checkjump: 1
+  buttonpress: 0
+  jumpheight: 24
+  keycode_space_1: 122
+  keycode_space_2: 120
+  keycode_space_3: 99
+  key_1: 0
+  key_2: 0
+  key_3: 0
+  player: {fileID: 3473346427840068027}
+  otherplayer: {fileID: 3654638466493601043, guid: 1cbb931c19657ea4089f325c8c3b94a4, type: 3}
+  UIrestart: {fileID: 0}
+  Pause: {fileID: 0}
+  esc_pause: {fileID: 0}
+  rb: {fileID: 6473967076523422225}
+  playerAudioSource: {fileID: 2656079983940573920}
+  collisionAudioClip: {fileID: 8300000, guid: 3b196c3915c72ca4ea9819d89918db41, type: 3}
+  sets: {fileID: 0}
 --- !u!50 &6473967076523422225
 Rigidbody2D:
   serializedVersion: 4
@@ -209,32 +240,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0328286}
   m_EdgeRadius: 0
---- !u!114 &8387153282774180485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3473346427840068027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed34da2360205142bc443e2eca59e4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  checkjump: 1
-  buttonpress: 0
-  jumpheight: 24
-  keycode_space_1: 122
-  keycode_space_2: 120
-  keycode_space_3: 99
-  player: {fileID: 3473346427840068027}
-  UIrestart: {fileID: 0}
-  Pause: {fileID: 0}
-  esc_pause: {fileID: 0}
-  rb: {fileID: 6473967076523422225}
-  playerAudioSource: {fileID: 2656079983940573920}
-  collisionAudioClip: {fileID: 8300000, guid: 3b196c3915c72ca4ea9819d89918db41, type: 3}
 --- !u!198 &6550054618812323959
 ParticleSystem:
   m_ObjectHideFlags: 0
