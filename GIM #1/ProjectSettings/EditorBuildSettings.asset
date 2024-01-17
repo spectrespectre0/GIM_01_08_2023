@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 998308b6f8b863548bb65a5c102f55e3
+  - enabled: 1
+    path: Assets/Scenes/HardLevel.unity
+    guid: 75de73f3fe74bde48902f8443497046a
   m_configObjects: {}
