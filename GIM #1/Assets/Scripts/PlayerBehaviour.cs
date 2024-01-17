@@ -73,15 +73,19 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(rb.velocity.x);
-
         if (Input.GetKeyDown(keycode_space_1) || Input.GetKeyDown(keycode_space_2) || Input.GetKeyDown(keycode_space_3))
         {
             buttonpress = true;
-            if (rb.gravityScale < 0)
+
+            if (rb.gravityScale > 0)
             {
                 Debug.Log(player.transform.position.x);
             }
+
+            //if (rb.gravityScale < 0)
+            //{
+            //    Debug.Log(player.transform.position.x);
+            //}
 
         }
         if (Input.GetKeyUp(keycode_space_1) || Input.GetKeyUp(keycode_space_2) || Input.GetKeyUp(keycode_space_3))
@@ -128,13 +132,19 @@ public class NewBehaviourScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Floor") && (rb.velocity.x > 0))
         {
             checkjump = true;
         }
-        else
-        {
-            checkjump = false;
+
+        if (collision.gameObject.CompareTag("Floor") && (rb.velocity.x < speed)){
+
+            Debug.Log("collided!");
+            playerAudioSource.Stop();
+            playerAudioSource.clip = collisionAudioClip;
+            playerAudioSource.Play();
+
+            StartCoroutine(ShowDeathEffects());
         }
     }
 
@@ -146,8 +156,9 @@ public class NewBehaviourScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         //spike death
-        if (collision.gameObject.CompareTag("Spike") || (collision.gameObject.CompareTag("Floor") && (rb.velocity.x == 0)))
+        if (collision.gameObject.CompareTag("Spike"))
         {
+            
             // Stop the audio clip
             playerAudioSource.Stop();
             playerAudioSource.clip = collisionAudioClip;
