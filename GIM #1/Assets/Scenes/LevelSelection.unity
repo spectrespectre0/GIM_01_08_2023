@@ -445,7 +445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' SONG TITLE \n hard'
+  m_text: HARD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb6ccda9490aef643ab31bedbcde5901, type: 2}
   m_sharedMaterial: {fileID: 4146820951317903692, guid: cb6ccda9490aef643ab31bedbcde5901, type: 2}
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' SONG TITLE \n medium'
+  m_text: MEDIUM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb6ccda9490aef643ab31bedbcde5901, type: 2}
   m_sharedMaterial: {fileID: 4146820951317903692, guid: cb6ccda9490aef643ab31bedbcde5901, type: 2}
@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' SONG TITLE \n easy'
+  m_text: EASY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb6ccda9490aef643ab31bedbcde5901, type: 2}
   m_sharedMaterial: {fileID: 4146820951317903692, guid: cb6ccda9490aef643ab31bedbcde5901, type: 2}

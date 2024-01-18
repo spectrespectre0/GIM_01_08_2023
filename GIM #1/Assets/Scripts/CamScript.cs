@@ -11,11 +11,13 @@ public class CamScript : MonoBehaviour
     void Start()
     {
         speed = nbs.speed;
+        rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb2d.velocity = new Vector2(speed,rb2d.velocity.y);
+        //transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+        
     }
 }

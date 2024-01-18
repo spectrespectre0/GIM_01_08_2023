@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Check if the loaded scene is the easy level screen
-        if (scene.name == "EasyLevel" || scene.name == "HardLevel")
+        if (scene.name == "EasyLevel" || scene.name == "MedLevel" || scene.name == "HardLevel")
         {
             // Stop the audio when entering the easy level screen
             StopAudio();

@@ -67,6 +67,9 @@ public class NewBehaviourScript : MonoBehaviour
         keycode_space_3 = (KeyCode)key_3;
 
         buttonpress = false;
+
+        //horizontal movement
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     } 
 
     // Update is called once per frame
@@ -111,6 +114,8 @@ public class NewBehaviourScript : MonoBehaviour
             esc_pause.Resume();
         }
 
+        
+
     } 
 
     public void nextbutton()
@@ -120,7 +125,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
 
         if (checkjump && buttonpress)
         {
