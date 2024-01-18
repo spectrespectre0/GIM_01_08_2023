@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MedLevel.unity
     guid: 191463cb570aaf44e8d7b6e6bd309002
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: a0255399e17531a4d8d6ff985f210e9d
   m_configObjects: {}
