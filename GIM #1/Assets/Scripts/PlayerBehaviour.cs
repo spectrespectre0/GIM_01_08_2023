@@ -77,15 +77,15 @@ public class NewBehaviourScript : MonoBehaviour
         {
             buttonpress = true;
 
-            if (rb.gravityScale > 0)
-            {
-                Debug.Log(player.transform.position.x);
-            }
-
-            //if (rb.gravityScale < 0)
+            //if (rb.gravityScale > 0)
             //{
             //    Debug.Log(player.transform.position.x);
             //}
+
+            if (rb.gravityScale < 0 && rb.gravityScale > -20)
+            {
+                Debug.Log(player.transform.position.x);
+            }
 
         }
         if (Input.GetKeyUp(keycode_space_1) || Input.GetKeyUp(keycode_space_2) || Input.GetKeyUp(keycode_space_3))
